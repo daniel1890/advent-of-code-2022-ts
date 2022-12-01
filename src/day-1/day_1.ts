@@ -1,10 +1,10 @@
 import { readFileSync } from 'fs';
 
 const linesString: string = readFileSync('src/day-1/day_1.txt','utf8');
-let linesArr = linesString.split("\n");
+let linesArr: string[] = linesString.split("\n");
 
 // Solution to part 1 & 2
-const findHighestElfCaloriesAndDeleteHighestElfCalories = (lines: string[]) => {
+const findHighestElfCaloriesAndDeleteHighestElfCalories = (lines: string[]): number => {
     let elfCalories: number = 0;
     let highestElf = 0;
     let highestElfIndexes: number[] = [];
@@ -34,9 +34,9 @@ const findHighestElfCaloriesAndDeleteHighestElfCalories = (lines: string[]) => {
 
 
 // Answers
-let topOneElf = findHighestElfCaloriesAndDeleteHighestElfCalories(linesArr);
-let topTwoElf = findHighestElfCaloriesAndDeleteHighestElfCalories(linesArr);
-let topThreeElf = findHighestElfCaloriesAndDeleteHighestElfCalories(linesArr);
+let topOneElf: number = findHighestElfCaloriesAndDeleteHighestElfCalories(linesArr);
+let topTwoElf: number = findHighestElfCaloriesAndDeleteHighestElfCalories(linesArr);
+let topThreeElf: number = findHighestElfCaloriesAndDeleteHighestElfCalories(linesArr);
 
 let answer1: number = topOneElf;
 let answer2: number = topOneElf + topTwoElf + topThreeElf;
