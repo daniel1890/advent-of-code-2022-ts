@@ -44,3 +44,5 @@ let answer2: number = topOneElf + topTwoElf + topThreeElf;
 
 console.log(answer1);
 console.log(answer2);
+
+// npx ts-node src/day-1/day_1.ts
